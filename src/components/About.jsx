@@ -35,7 +35,7 @@ const About = (props) => {
         <div className="mt-12">
           <button
             onClick={() => props.scrollToSection("projects")}
-            className="px-8 py-4 border border-blue-400 text-blue-400 rounded-md hover:bg-blue-400/10 transition-all duration-200 font-mono"
+            className="px-8 py-4 border border-blue-400 text-blue-400 rounded-md hover:bg-blue-400/10 transition-all duration-200 font-mono cursor-pointer"
           >
             Check out my work!
           </button>

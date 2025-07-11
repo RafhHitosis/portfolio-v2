@@ -33,7 +33,7 @@ const Nav = (props) => {
             <button
               key={item.id}
               onClick={() => props.scrollToSection(item.id)}
-              className={`flex items-center w-full py-3 px-4 mb-2 text-left transition-all duration-200 rounded-md group ${
+              className={`flex items-center w-full py-3 px-4 mb-2 text-left transition-all duration-200 rounded-md group cursor-pointer ${
                 props.activeSection === item.id
                   ? "bg-blue-500/10 text-blue-400"
                   : "hover:bg-slate-700/50 hover:text-white"

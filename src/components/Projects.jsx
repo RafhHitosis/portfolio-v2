@@ -51,14 +51,14 @@ const Projects = () => {
                     <a
                       href={project.github}
                       target="_blank"
-                      className="text-slate-400 hover:text-blue-400 transition-colors"
+                      className="text-slate-400 hover:text-blue-400 transition-colors cursor-pointer"
                     >
                       <Github size={20} />
                     </a>
                     <a
                       href={project.live}
                       target="_blank"
-                      className="text-slate-400 hover:text-blue-400 transition-colors"
+                      className="text-slate-400 hover:text-blue-400 transition-colors cursor-pointer"
                     >
                       <ExternalLink size={20} />
                     </a>
