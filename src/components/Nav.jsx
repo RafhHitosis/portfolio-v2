@@ -2,13 +2,6 @@ import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Nav = (props) => {
-  const navItems = [
-    { id: "about", label: "About", number: "01" },
-    { id: "experience", label: "Experience", number: "02" },
-    { id: "projects", label: "Projects", number: "03" },
-    { id: "contact", label: "Contact", number: "04" },
-  ];
-
   return (
     <nav
       className={`fixed left-0 top-0 h-full w-80 bg-slate-800/50 backdrop-blur-sm border-r border-slate-700 p-8 transform transition-transform duration-300 z-40 ${
@@ -29,7 +22,7 @@ const Nav = (props) => {
 
         {/* Navigation Links */}
         <div className="flex-1">
-          {navItems.map((item) => (
+          {props.navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => props.scrollToSection(item.id)}

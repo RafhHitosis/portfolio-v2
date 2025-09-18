@@ -64,6 +64,7 @@ const App = () => {
 
       {/* Left Sidebar Navigation */}
       <Nav
+        navItems={navItems}
         scrollToSection={scrollToSection}
         isMenuOpen={isMenuOpen}
         activeSection={activeSection}
