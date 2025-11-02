@@ -1,84 +1,111 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
+import projects from "../data/projects";
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Expense Tracker Web App",
-      description:
-        "An expense tracker web application that enables users to manage budgets, add expenses, set financial goals, and track spending efficiently.",
-      technologies: [
-        "Html",
-        "Tailwind CSS",
-        "JavaScript",
-        "React",
-        "Firebase",
-        "Claude AI",
-      ],
-      github: "https://github.com/RafhHitosis/budgetwise",
-      live: "https://kinsenas.netlify.app/",
-    },
-    {
-      title: "Loan Tracker Web App",
-      description:
-        "A simple loan tracker web application built with React, optimized for mobile UI, that allows users to add loans, view payment breakdowns, and get indicators for upcoming due dates.",
-      technologies: ["Html", "Tailwind CSS", "JavaScript", "React", "Firebase"],
-      github: "https://github.com/RafhHitosis/loan-webApp.git",
-      live: "https://ioyou.netlify.app/",
-    },
-    {
-      title: "Calculator Android App",
-      description:
-        "A simple standard calculator app for Android, built with Java in Android Studio, featuring local history saving for privacy using Room (SQLite) database.",
-      technologies: ["Java", "Android Studio", "Room (SQLite)"],
-      github: "https://github.com/RafhHitosis/calQ.git",
-    },
-  ];
+  const { theme } = useTheme();
 
   return (
-    <section id="projects" className="min-h-screen px-6 lg:px-12 py-20">
-      <div className="max-w-6xl">
+    <section
+      id="projects"
+      className={`min-h-screen px-6 lg:px-12 py-20 transition-colors duration-300 ${
+        theme === "dark" ? "bg-transparent" : "bg-slate-50"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Section Title */}
         <div className="flex items-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-200 mr-4">
-            <span className="text-blue-400 text-xl mr-2">03.</span>
+          <h2
+            className={`text-3xl font-bold mr-4 ${
+              theme === "dark" ? "text-slate-200" : "text-slate-800"
+            }`}
+          >
+            <span
+              className={`text-xl mr-2 ${
+                theme === "dark" ? "text-blue-400" : "text-blue-600"
+              }`}
+            >
+              03.
+            </span>
             Some Things I've Built
           </h2>
-          <div className="flex-1 h-px bg-slate-700 ml-4"></div>
+          <div
+            className={`flex-1 h-px ml-4 ${
+              theme === "dark" ? "bg-slate-700" : "bg-slate-300"
+            }`}
+          ></div>
         </div>
 
+        {/* Project List */}
         <div className="space-y-16">
           {projects.map((project, index) => (
             <div key={index} className="group">
-              <div className="bg-slate-800/50 rounded-lg p-8 hover:bg-slate-800/70 transition-all duration-300 hover:transform hover:-translate-y-1">
+              <div
+                className={`rounded-lg p-8 transition-all duration-300 hover:-translate-y-1 ${
+                  theme === "dark"
+                    ? "bg-slate-800/50 hover:bg-slate-800/70"
+                    : "bg-white hover:bg-slate-100 shadow-sm"
+                }`}
+              >
+                {/* Project Header */}
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-slate-200 group-hover:text-blue-400 transition-colors">
+                  <h3
+                    className={`text-2xl font-bold transition-colors ${
+                      theme === "dark"
+                        ? "text-slate-200 group-hover:text-blue-400"
+                        : "text-slate-800 group-hover:text-blue-600"
+                    }`}
+                  >
                     {project.title}
                   </h3>
                   <div className="flex space-x-3">
                     <a
                       href={project.github}
                       target="_blank"
-                      className="text-slate-400 hover:text-blue-400 transition-colors cursor-pointer"
+                      rel="noopener noreferrer"
+                      className={`transition-colors cursor-pointer ${
+                        theme === "dark"
+                          ? "text-slate-400 hover:text-blue-400"
+                          : "text-slate-500 hover:text-blue-600"
+                      }`}
                     >
                       <Github size={20} />
                     </a>
                     <a
                       href={project.live}
                       target="_blank"
-                      className="text-slate-400 hover:text-blue-400 transition-colors cursor-pointer"
+                      rel="noopener noreferrer"
+                      className={`transition-colors cursor-pointer ${
+                        theme === "dark"
+                          ? "text-slate-400 hover:text-blue-400"
+                          : "text-slate-500 hover:text-blue-600"
+                      }`}
                     >
                       <ExternalLink size={20} />
                     </a>
                   </div>
                 </div>
-                <p className="text-slate-400 mb-6 leading-relaxed">
+
+                {/* Description */}
+                <p
+                  className={`mb-6 leading-relaxed ${
+                    theme === "dark" ? "text-slate-400" : "text-slate-600"
+                  }`}
+                >
                   {project.description}
                 </p>
+
+                {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-blue-400/10 text-blue-400 rounded-full text-sm font-mono"
+                      className={`px-3 py-1 rounded-full text-sm font-mono ${
+                        theme === "dark"
+                          ? "bg-blue-400/10 text-blue-400"
+                          : "bg-blue-100 text-blue-700"
+                      }`}
                     >
                       {tech}
                     </span>
