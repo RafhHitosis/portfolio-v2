@@ -58,15 +58,15 @@ const About = (props) => {
         >
           <p>
             I’m a passionate and motivated frontend web developer with a strong
-            foundation in web technologies. I recently graduated with a degree
-            in Information Technology and enjoy building clean, user-friendly
-            websites that are easy to use and understand.
+            foundation in modern web technologies. As a recent Information
+            Technology graduate, I enjoy building clean, user-friendly websites
+            that are responsive and easy to navigate.
           </p>
           <p>
-            I'm always learning new things to improve my skills, whether it’s
-            through exploring new tools, working on small projects, or keeping
-            up with trends in web development. My goal is to create websites
-            that not only look good but also work well for everyone.
+            I’m constantly exploring new tools, working on personal projects,
+            and keeping up with the latest trends in web development. My goal is
+            to develop websites that perform well, follow best practices, and
+            provide a smooth experience for all users.
           </p>
         </div>
 

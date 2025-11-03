@@ -9,7 +9,7 @@ const projects = [
       "JavaScript",
       "React",
       "Firebase",
-      "Claude AI",
+      "Gemini API",
     ],
     github: "https://github.com/RafhHitosis/budgetwise",
     live: "https://kinsenas.netlify.app/",

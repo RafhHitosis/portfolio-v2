@@ -28,7 +28,7 @@ const Nav = (props) => {
             rdev {"</>"}
           </h1>
           <h2
-            className={`text-xl mb-4 ${
+            className={`text-lg mb-4 ${
               theme === "dark" ? "text-blue-400" : "text-blue-500"
             }`}
           >
